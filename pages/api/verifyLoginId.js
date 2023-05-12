@@ -8,7 +8,7 @@ export default async function verifyLoginId(req, res) {
     if (!loginId) {
       return res.status(400).json({ success: false, cause: "null" });
     }
-    const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{6,}$/;
+    const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{6,12}$/;
     const isValid = pattern.test(loginId);
     if (!isValid) {
       return res.status(400).json({ success: false, cause: "pattern" });

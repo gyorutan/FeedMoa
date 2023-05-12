@@ -8,7 +8,7 @@ export default async function verifyUsername(req, res) {
     if (!username) {
       return res.status(400).json({ success: false, cause: "null" });
     }
-    const pattern = /^([a-zA-Z0-9가-힣]{3,})$/;
+    const pattern = /^([a-zA-Z0-9가-힣]{3,7})$/;
     const isValid = pattern.test(username);
     if (!isValid) {
       return res.status(400).json({ success: false, cause: "pattern" });
