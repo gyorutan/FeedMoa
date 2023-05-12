@@ -16,7 +16,7 @@ export default function Regisrer(props) {
   const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] = useState(true);
 
   // 비밀번호 형식검사
-  const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&()+={}[\]:;"'<>?,./\\|\-])(?!.*[\s])[a-zA-Z0-9!@#$%^&()+={}[\]:;"'<>?,./\\|\-]{8,16}$/;
+  const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?!.*[\s])[a-zA-Z0-9]{8,16}$/;
   const isValidLoginPw = pattern.test(loginPw);
 
   // 회원가입 버튼 감시
@@ -339,7 +339,7 @@ export default function Regisrer(props) {
               <span
                 style={{ marginLeft: "5px", fontSize: "13px", color: "gray" }}
               >
-                영문, 숫자 조합 8 ~ 16
+                영문, 숫자 조합 8 ~ 16자리, 특수문자 사용가능
               </span>
             ) : null}
             <div>
