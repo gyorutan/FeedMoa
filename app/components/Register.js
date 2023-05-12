@@ -143,7 +143,7 @@ export default function Regisrer(props) {
           <img
             className="m-auto"
             style={{ width: "280px" }}
-            src="./FeedMoa.png"
+            src="./feedmoa.png"
           />
           <hr />
           <form className="p-5" onSubmit={submitRegister}>
