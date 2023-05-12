@@ -16,7 +16,7 @@ export default function Regisrer(props) {
   const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] = useState(true);
 
   // 비밀번호 형식검사
-  const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,16}$/;
+  const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&()+={}[\]:;"'<>?,./\\|\-])(?!.*[\s])[a-zA-Z0-9!@#$%^&()+={}[\]:;"'<>?,./\\|\-]{8,16}$/;
   const isValidLoginPw = pattern.test(loginPw);
 
   // 회원가입 버튼 감시
@@ -317,8 +317,6 @@ export default function Regisrer(props) {
                 }}
                 placeholder="비밀번호"
                 className="mt-5 focus:border focus:border-2 focus:border-violet-400 login-pw-input block w-full border-gray-300 rounded-md py-2 px-3"
-                pattern="^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8}$"
-                required
                 type="password"
               />
             </div>
